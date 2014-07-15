@@ -1,5 +1,8 @@
 .entry-content{
 	
+	@extend .sixteen;
+	@extend .columns;
+
 	margin-top: 1em;
 
 	@include breakpoint($breakpoint-medium) {

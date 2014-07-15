@@ -8,7 +8,7 @@
 				<?php the_post_thumbnail(); ?>
 				<?php the_title(); ?>
 			</a>
-			<?php get_template_part('_snippets/_snippet-schwerpunkt-liste');?>
+			<div><?php get_template_part('_snippets/_snippet-schwerpunkt-liste');?></div>
 		</article>
 		
 		<?php endwhile; ?>

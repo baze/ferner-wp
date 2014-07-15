@@ -1,6 +1,6 @@
 <?php 
 
-define('WP_HOME', 'http://192.168.1.75:8080/ferner-wp/public');
+define('WP_HOME', 'http://localhost/ferner-wp/public');
 define('WP_SITEURL', WP_HOME . '/wordpress/');
 
 define('WP_CONTENT_DIR', APP_ROOT . '/public/content');

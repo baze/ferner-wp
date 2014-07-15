@@ -1,7 +1,7 @@
 .entry-header{
-	
-	margin-bottom: 1em;
-	
+	@extend .sixteen;
+	@extend .columns;
+
 	.entry-title{ margin-bottom: 0.5em; }
 
 }

@@ -1,4 +1,7 @@
 ._global-hero{
 	@extend .container;
+	@extend %box-shadow;
+	height: 18em;
+	background-color: $white;
 	margin: 1em auto 1em;	
 }
