@@ -1,0 +1,19 @@
+._global-sidebar{
+
+	@extend .four;
+	@extend .columns;
+	@extend .omega;
+
+	font-family: $primary-font;
+	font-size: 75%;
+	
+	.widget{}
+
+	.widget-title{
+		font-family: $primary-font;
+		color: $primary-color;
+		font-weight: 400;
+		font-size: 150%;
+		text-transform: uppercase;
+	}
+}

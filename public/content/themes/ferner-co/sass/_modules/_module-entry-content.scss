@@ -1,0 +1,8 @@
+.entry-content{
+	
+	margin-top: 1em;
+
+	@include breakpoint($breakpoint-medium) {
+		p{ text-align: justify; }
+	}
+}
