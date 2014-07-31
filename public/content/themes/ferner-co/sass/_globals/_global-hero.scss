@@ -1,10 +1,16 @@
 ._global-hero{
 	@extend .container;
 	@extend %box-shadow;
+<<<<<<< HEAD
 	background-color: $white;
 	margin: 1em auto 1em;
 
 	img{ display: block; max-width: 100%; }
 
 	&:empty{ display: none; margin: 0; }	
+=======
+	height: 18em;
+	background-color: $white;
+	margin: 1em auto 1em;	
+>>>>>>> FETCH_HEAD
 }

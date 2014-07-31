@@ -1,4 +1,5 @@
 <div class="_content-anwaelte entry-content">
+<<<<<<< HEAD
 
 	<?php
 	  $post_type = 'anwaelte';
@@ -29,6 +30,19 @@
 
 			$my_query = null;
 			$my_query = new WP_Query($args);
+=======
+				
+		<?php query_posts( 'post_type=anwaelte&showposts=-1&orderby=asc' );?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		
+		<article>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail(); ?>
+				<?php the_title(); ?>
+			</a>
+			<div><?php get_template_part('_snippets/_snippet-schwerpunkt-liste');?></div>
+		</article>
+>>>>>>> FETCH_HEAD
 		
 			if( $my_query->have_posts() ) {			
 				while ($my_query->have_posts()) : $my_query->the_post(); ?>

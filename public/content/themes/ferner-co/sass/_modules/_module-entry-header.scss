@@ -1,6 +1,11 @@
 .entry-header{
 	@extend .sixteen;
 	@extend .columns;
+<<<<<<< HEAD
 }
+=======
+
+	.entry-title{ margin-bottom: 0.5em; }
+>>>>>>> FETCH_HEAD
 
 .entry-title{ margin: 0.5em 0; }
