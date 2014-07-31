@@ -1,6 +1,6 @@
 ._global-sidebar{
 
-	@extend .four;
+	@extend .five;
 	@extend .columns;
 	@extend .omega;
 
@@ -16,4 +16,11 @@
 		font-size: 150%;
 		text-transform: uppercase;
 	}
+}
+
+.notruf{
+	margin: 1em 0;
+	font-size: 150%;
+	color: $primary-color;
+	text-align: center;
 }

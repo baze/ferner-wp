@@ -36,6 +36,19 @@
 
 </head>
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+  
+  <!--
+  <div class="_snippet-language-switcher">
+    <ul class="_snippet-language-switcher-list">
+      <li>Deutsch</li>
+      <li>English</li>
+      <li>Italiano</li>
+      <li>pусский</li>
+    </ul>
+    <div class="_snippet-language-switcher-toggle"><?php _e("Languages"); ?></div>
+  </div>
+  -->
+
     <!--[if lt IE 7]>
     	<p class="browsehappy">Sie verwenden einen <strong>veralteten</strong> Browser. Bitte <a href="http://browsehappy.com/">upgraden Sie Ihren Browser</a> um Ihr Surferlebnis zu verbessern.</p>
     <![endif]-->

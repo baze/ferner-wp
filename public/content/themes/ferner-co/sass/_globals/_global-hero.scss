@@ -1,4 +1,10 @@
 ._global-hero{
 	@extend .container;
-	margin: 1em auto 1em;	
+	@extend %box-shadow;
+	background-color: $white;
+	margin: 1em auto 1em;
+
+	img{ display: block; max-width: 100%; }
+
+	&:empty{ display: none; margin: 0; }	
 }

@@ -7,10 +7,12 @@ h1, h2, h3, h4, ,h5, h6{
 	font-family:$primary-font;
 	font-weight: 400;
 	letter-spacing: -0.025em;
-	color: $primary-color;
 	margin: 0;
 
 }
+
+h1, h2{ color: $primary-color; }
+h3, h4, h5, h6{ color: #333; }
 
 h1{
 	font-size: 1.75em;

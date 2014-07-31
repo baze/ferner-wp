@@ -33,9 +33,12 @@
 
 
     //make page-transitions prettier
-    $("._global-main").hide();
     $("._global-header").hide();
+    $("._global-hero").hide();
+    $("._global-main").hide();
+        
     $("._global-header").fadeIn(550);
+    $("._global-hero").delay(200).fadeIn(550);
     $("._global-main").delay(200).fadeIn(550);
 
   });

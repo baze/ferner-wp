@@ -87,7 +87,7 @@ $prefixes: ("-webkit-","-moz-", "-o-", "-ms-", "");
 }
 
 %transition{
-  @include transition(all, 185ms, ease-in-out);
+  @include transition(all 185ms ease-in-out);
 }
 
 %border-radius{
