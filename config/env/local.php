@@ -1,7 +1,7 @@
-<?php 
+<?php
 
-define('WP_HOME', 'http://kunden.euw.de/foo/public');
-define('WP_SITEURL', WP_HOME . '/site/');
+define('WP_HOME', 'http://127.0.0.1:8080/sites/ferner-wp/public');
+define('WP_SITEURL', WP_HOME . '/wordpress/');
 
 define('WP_CONTENT_DIR', APP_ROOT . '/public/content');
 define('WP_CONTENT_URL', WP_HOME . '/content');
@@ -10,16 +10,16 @@ define('WP_DEBUG', false);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'database');
+define('DB_NAME', 'ferner_db26');
 
 /** Ersetze username_here mit deinem MySQL-Datenbank-Benutzernamen */
-define('DB_USER', 'user');
+define('DB_USER', 'ferner_26');
 
 /** Ersetze password_here mit deinem MySQL-Passwort */
-define('DB_PASSWORD', 'password');
+define('DB_PASSWORD', 'ifqprLPy4EPATRJ8');
 
 /** Ersetze localhost mit der MySQL-Serveradresse */
-define('DB_HOST', 'server');
+define('DB_HOST', 'dedi856.your-server.de');
 
 /** Der Datenbankzeichensatz der beim Erstellen der Datenbanktabellen verwendet werden soll */
 define('DB_CHARSET', 'utf8');

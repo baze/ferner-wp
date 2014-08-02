@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-define('WP_HOME', 'http://192.168.1.75:8080/ferner-wp/public');
+define('WP_HOME', 'http://127.0.0.1:8080/sites/ferner-wp/public');
 define('WP_SITEURL', WP_HOME . '/wordpress/');
 
 define('WP_CONTENT_DIR', APP_ROOT . '/public/content');
 define('WP_CONTENT_URL', WP_HOME . '/content');
 
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */

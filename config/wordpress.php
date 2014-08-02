@@ -51,7 +51,7 @@ define('WPLANG', 'de_DE');
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
-    define('ABSPATH', dirname(dirname(__FILE__)) . '/public/site/');
+    define('ABSPATH', dirname(dirname(__FILE__)) . '/public/wordpress/');
 
 /** Sets up WordPress vars and included files. */
 

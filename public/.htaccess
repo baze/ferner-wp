@@ -1,11 +1,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /ferner-wp/public/
+RewriteBase /sites/ferner-wp/public/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /ferner-wp/public/index.php [L]
+RewriteRule . /sites/ferner-wp/public/index.php [L]
 </IfModule>
 
 # END WordPress
