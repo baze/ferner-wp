@@ -6,5 +6,5 @@
  */
 ?>
 	
-	<?php the_content(); ?>
-	<?php edit_post_link( __( 'Bearbeiten', 'ferner-co' ), '<span class="edit-link">', '</span>' ); ?>
+<?php the_content(); ?>
+<?php edit_post_link( __( 'Bearbeiten', 'ferner-co' ), '<span class="edit-link">', '</span>' ); ?>
