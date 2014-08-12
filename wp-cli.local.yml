@@ -1,4 +1,6 @@
+url: 192.168.33.20/wordpress-sites/ferner-wp/public/
 path: public/wordpress
+color: auto
 
 core config:
     dbname: ferner_db26
