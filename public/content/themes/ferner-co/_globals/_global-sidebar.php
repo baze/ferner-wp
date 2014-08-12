@@ -1,4 +1,8 @@
 <aside class="_global-sidebar" role="complementary">
+
+    <div class="widget sprachen">
+        <?php get_template_part('_snippets/_snippet-language-switcher') ?>
+    </div>
 	
 	<div class="widget kontakt">
 	<?php 
