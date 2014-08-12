@@ -55,8 +55,4 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 
-// var_dump(ABSPATH); die();
-
-// weird hack because otherwise wp-cli won't load when this wp-settings.php file is loaded
-if (!empty($_SERVER['HTTP_HOST']))
-	require_once(ABSPATH . 'wp-settings.php');
+require_once(ABSPATH . 'wp-settings.php');

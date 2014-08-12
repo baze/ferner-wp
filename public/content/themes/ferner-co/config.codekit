@@ -3126,7 +3126,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "ferner-co",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "harddrive_darkGray"
 	},
 "projectSettings": {
@@ -3261,7 +3261,7 @@
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
 	"externalServerAddress": "http:\/\/127.0.0.1:8080",
-	"externalServerPreviewPathAddition": "\/sites\/ferner-wp\/public",
+	"externalServerPreviewPathAddition": "\/wordpress-sites\/ferner-wp\/public",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,
 	"hamlAutoOutputPathFilenamePattern": "*.html",
