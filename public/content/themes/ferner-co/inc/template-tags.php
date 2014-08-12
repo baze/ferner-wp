@@ -4,29 +4,33 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package fotodako
+ * @package fotoferner_co
  */
 
-if ( ! function_exists( 'dako_paging_nav' ) ) :
+$prefix = 'ferncer_co';
+
+if ( ! function_exists( 'ferner_co_paging_nav' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  */
-function dako_paging_nav() {
+function ferner_co_paging_nav() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'dako' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'ferner_co' ); ?></h1>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'dako' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts',
+                    'ferner_co' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'dako' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>',
+                    'ferner_co' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -35,11 +39,11 @@ function dako_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'dako_post_nav' ) ) :
+if ( ! function_exists( 'ferner_co_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  */
-function dako_post_nav() {
+function ferner_co_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -49,11 +53,11 @@ function dako_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'dako' ); ?></h1>
+		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'ferner_co' ); ?></h1>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'dako' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'dako' ) );
+				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'ferner_co' ) );
+				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'ferner_co' ) );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -61,11 +65,11 @@ function dako_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'dako_posted_on' ) ) :
+if ( ! function_exists( 'ferner_co_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function dako_posted_on() {
+function ferner_co_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -79,12 +83,12 @@ function dako_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'dako' ),
+		_x( 'Posted on %s', 'post date', 'ferner_co' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'dako' ),
+		_x( 'by %s', 'post author', 'ferner_co' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -98,8 +102,8 @@ endif;
  *
  * @return bool
  */
-function dako_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'dako_categories' ) ) ) {
+function ferner_co_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'ferner_co_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -112,24 +116,24 @@ function dako_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'dako_categories', $all_the_cool_cats );
+		set_transient( 'ferner_co_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so dako_categorized_blog should return true.
+		// This blog has more than 1 category so ferner_co_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so dako_categorized_blog should return false.
+		// This blog has only 1 category so ferner_co_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in dako_categorized_blog.
+ * Flush out the transients used in ferner_co_categorized_blog.
  */
-function dako_category_transient_flusher() {
+function ferner_co_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'dako_categories' );
+	delete_transient( 'ferner_co_categories' );
 }
-add_action( 'edit_category', 'dako_category_transient_flusher' );
-add_action( 'save_post',     'dako_category_transient_flusher' );
+add_action( 'edit_category', 'ferner_co_category_transient_flusher' );
+add_action( 'save_post',     'ferner_co_category_transient_flusher' );
